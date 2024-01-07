@@ -1,6 +1,6 @@
 import { Title, Text, Image, Container, Flex, em } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { AppHeader } from '../components/AppHeader';
+import { AppHeader } from '../AppHeader';
 
 export function Welcome() {
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
