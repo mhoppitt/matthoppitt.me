@@ -3,8 +3,9 @@
 import { createTheme } from '@mantine/core';
 
 export const theme = createTheme({
+  fontFamily: "Montserrat, sans-serif",
   colors: {
-    mainBlue: ["#e0feff","#ccf9ff","#9cf0ff","#68e8fe","#43e0fd","#2fdbfd","#1ddafe","#00c1e3","#00accb","#0095b2"],
+    mainBlue: ["#e7f1ff","#cedfff","#9bbcff","#6496ff","#3876fe","#1c62fe","#0958ff","#0049e4","#0041cc","#0037b4"],
   },
   primaryColor: "mainBlue",
 });
