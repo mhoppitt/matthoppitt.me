@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { Container, Group, Burger, Image, Button, Flex, Stack, Menu, em } from '@mantine/core';
-import { useDisclosure, useMediaQuery } from '@mantine/hooks';
+import { useMediaQuery, useClickOutside } from '@mantine/hooks';
 
 const links = [
   { url: '/', label: 'HOME' },
@@ -9,7 +10,8 @@ const links = [
 
 export function AppHeader() {
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
-  const [isBurgerOpen, { toggle }] = useDisclosure(false);
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+  const ref = useClickOutside(() => setIsBurgerMenuOpen(false));
 
   const navbarItems = links.map((link) => (
     <Button
@@ -34,6 +36,7 @@ export function AppHeader() {
       color="black"
       miw="100%"
       justify="right"
+      onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
     >
       {link.label}
     </Button>
@@ -57,7 +60,7 @@ export function AppHeader() {
           </Group>
           <Menu width="100%">
             <Menu.Target>
-              <Burger opened={isBurgerOpen} onClick={toggle} hiddenFrom="xs" size="md" />
+              <Burger ref={ref} opened={isBurgerMenuOpen} onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)} hiddenFrom="xs" size="md" />
             </Menu.Target>
             <Menu.Dropdown>
               <Stack align="flex-end">
