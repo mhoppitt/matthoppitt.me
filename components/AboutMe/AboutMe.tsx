@@ -1,7 +1,7 @@
 import { Group, Text, ActionIcon, Image as MantineImage } from '@mantine/core';
 import styled from 'styled-components'
 
-const Image = styled(MantineImage)<{radius: string, w: string, h: number, fit: string, src: string}>`
+const Image = styled(MantineImage)<{src: string, alt: string, radius: string, w: string, h: number}>`
   &:hover {
     filter: invert(35%) sepia(99%) saturate(7499%) hue-rotate(222deg) brightness(103%) contrast(105%);
   }`;
@@ -21,32 +21,29 @@ export function AboutMe() {
       <Group align="center" w="100%" justify="center" gap={30} py={10}>
         <ActionIcon component="a" href="https://github.com/mhoppitt" target="_blank" variant="transparent">
           <Image
+            src="/github-icon.png"
+            alt="github-icon"
             radius="xl"
             w="auto"
             h={35}
-            fit="contain"
-            src="/github-icon.png"
-            alt="github-icon"
           />
         </ActionIcon>
         <ActionIcon component="a" href="https://au.linkedin.com/in/matt-hoppitt" target="_blank" variant="transparent">
           <Image
+            src="/linkedin-icon.png"
+            alt="linkedin-icon"
             radius="xl"
             w="auto"
             h={35}
-            fit="contain"
-            src="/linkedin-icon.png"
-            alt="linkedin-icon"
           />
         </ActionIcon>
         <ActionIcon component="a" href="mailto:mhoppitt18@outlook.com" variant="transparent">
           <Image
+            src="/email-icon.png"
+            alt="email-icon"
             radius="xl"
             w="auto"
             h={35}
-            fit="contain"
-            src="/email-icon.png"
-            alt="email-icon"
           />
         </ActionIcon>
       </Group>
