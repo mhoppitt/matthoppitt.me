@@ -1,9 +1,10 @@
 import { Title, Text, Image, Container, Flex, em } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { AppHeader } from '../AppHeader';
+import { AppHeader } from '../AppHeader/AppHeader';
+import { mantineBreakpointXS } from '../../helpers/constants';
 
 export function Welcome() {
-  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+  const isMobile = useMediaQuery(`(max-width: ${mantineBreakpointXS})`);
   return (
     <section id="welcome-section">
       <Container size="100%">
@@ -11,7 +12,7 @@ export function Welcome() {
         <Container style={{ marginTop: "10vh" }}>
           <Flex justify="center" align="center" direction="column">
             <Title order={1} size="400%" ta="center">Hey, I'm Matt Hoppitt</Title>
-            <Text size="140%" my={30} ta="center">I build applications with exceptional quality</Text>
+            <Text size="140%" my={30} ta="center">I build high-quality software</Text>
             <Image
               w={isMobile ? "50%" : "25%"}
               my={"2vh"}
