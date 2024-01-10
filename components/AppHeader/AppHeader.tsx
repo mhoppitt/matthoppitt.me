@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { Container, Group, Burger, Image, Button, Flex, Stack, Menu, em } from '@mantine/core';
 import { useMediaQuery, useClickOutside } from '@mantine/hooks';
+import { mantineBreakpointXS } from '../../helpers/constants';
 
 const links = [
   { url: '/', label: 'HOME' },
-  { url: '#about', label: 'ABOUT' },
-  { url: '#projects', label: 'PROJECTS' },
+  { url: '#personal-section', label: 'ABOUT' },
+  { url: '#projects-section', label: 'PROJECTS' },
 ];
 
 export function AppHeader() {
-  const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
+  const isMobile = useMediaQuery(`(max-width: ${mantineBreakpointXS})`);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
   const ref = useClickOutside(() => setIsBurgerMenuOpen(false));
 
@@ -26,7 +27,7 @@ export function AppHeader() {
     </Button>
   ));
 
-  const burgerItems = links.map((link) => (
+  const burgerMenuItems = links.map((link) => (
     <Button
       key={link.label}
       component="a"
@@ -43,7 +44,7 @@ export function AppHeader() {
   ));
 
   return (
-    <header>
+    <header id="navigation-bar">
       <Container maw={1300} style={{ paddingTop: isMobile ? 10 : 20, paddingLeft: 0, paddingRight: 0 }}>
         <Flex align="center" justify="space-between">
           <Button component="a" href="/" variant="transparent" h={50}>
@@ -64,7 +65,7 @@ export function AppHeader() {
             </Menu.Target>
             <Menu.Dropdown>
               <Stack align="flex-end">
-                {burgerItems}
+                {burgerMenuItems}
               </Stack>
             </Menu.Dropdown>
           </Menu>

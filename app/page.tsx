@@ -1,6 +1,6 @@
 'use client';
-import { Welcome } from '../components/pages/Welcome';
-import { About } from '../components/pages/About';
+import { Welcome } from '../components/MainSections/Welcome';
+import { About } from '../components/MainSections/About';
 
 export default function App() {
   return (
