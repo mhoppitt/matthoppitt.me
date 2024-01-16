@@ -9,7 +9,7 @@ const Image = styled(MantineImage)<{src: string, alt: string, radius: string, w:
 export function AboutMe() {
   return (
     <section id="about-me">
-      <Text fw={700} hiddenFrom="sm">ABOUT ME</Text>
+      <Text fw={700} hiddenFrom="md">ABOUT ME</Text>
       <Text style={{ paddingBottom: 10 }}>Back in 2014, I built my first HTML website and fell in love with the art of software engineering. Fast forward to
         today, equipped with a Bachelor of Information Systems and a fresh enthusiasm, I've now had the privilege of building
         software for one of Australia's largest insurers – and I'm just getting started.</Text>

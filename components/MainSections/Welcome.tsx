@@ -1,7 +1,7 @@
 import { Title, Text, Image, Container, Flex, em } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { AppHeader } from '../AppHeader/AppHeader';
-import { mantineBreakpointXS } from '../../helpers/constants';
+import { mantineBreakpointXS } from '../../constants/mantineBreakpointConstants';
 
 export function Welcome() {
   const isMobile = useMediaQuery(`(max-width: ${mantineBreakpointXS})`);
