@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Container, Group, Burger, Image, Button, Flex, Stack, Menu, em } from '@mantine/core';
 import { useMediaQuery, useClickOutside } from '@mantine/hooks';
-import { mantineBreakpointXS } from '../../helpers/constants';
+import { mantineBreakpointXS } from '../../constants/mantineBreakpointConstants';
 
 const links = [
   { url: '/', label: 'HOME' },

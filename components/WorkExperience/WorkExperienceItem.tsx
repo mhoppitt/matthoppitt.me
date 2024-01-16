@@ -1,7 +1,7 @@
 import { Grid, Flex, Card, Text, Badge } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { mantineBreakpointSM } from '../../helpers/constants';
-import { WorkExperience } from '../../helpers/workExperience';
+import { mantineBreakpointSM } from '../../constants/mantineBreakpointConstants';
+import { WorkExperience } from '../../constants/workExperienceConstants';
 
 type WorkExperienceItemProps = {
   workExperienceItem : WorkExperience,
