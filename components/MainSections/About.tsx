@@ -8,7 +8,7 @@ export function About() {
   const isMediumBreakpoint = useMediaQuery(`(max-width: ${mantineBreakpointMD})`);
   return (
     <section id="personal-section">
-      <Container maw={1400} py={20}>
+      <Container maw={1400} py={40}>
         <Grid columns={20} align="center">
           <Grid.Col span={isMediumBreakpoint ? 20 : 8}>
             <AboutMe />

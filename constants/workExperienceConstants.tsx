@@ -13,7 +13,7 @@ export const workExperienceList: WorkExperience[] = [
     company: "Suncorp Group",
     jobDescription: `Delivered high-quality production code for complex payments systems, ensuring high availability for many consuming
     applications. Currently re-writing multiple legacy web applications into a newer tech stack with React and Java.`,
-    skills: ["React", "JavaScript", "Java", "Spring Web Flow", "CI/CD"],
+    skills: ["React", "JavaScript", "Java", "Springboot", "CI/CD"],
   },
   {
     dateRange: "Feb 2023 – Nov 2023",
