@@ -19,9 +19,9 @@ export function AppFooter() {
               <Stack justify="center" align="center" gap={15}>
                 <MantineImage
                   w={80}
-                  src="/avatar.png"
+                  src="/avatar-no-bg.png"
                 />
-                <Text c="white" ta="center">I build applications with exceptional quality</Text>
+                <Text c="white" ta="center">I build high-quality software</Text>
               </Stack>
             </Grid.Col>
             <Grid.Col span={isMobile? 12 : 6}>
