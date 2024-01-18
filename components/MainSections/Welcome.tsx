@@ -8,8 +8,7 @@ export function Welcome() {
   return (
     <section id="welcome-section">
       <Container size="100%">
-        <AppHeader />
-        <Container style={{ marginTop: "10vh" }}>
+        <Container style={{ marginTop: "10vh" }} pb={40}>
           <Flex justify="center" align="center" direction="column">
             <Title order={1} size="400%" ta="center">Hey, I'm Matt Hoppitt</Title>
             <Text size="140%" my={30} ta="center">I build high-quality software</Text>
