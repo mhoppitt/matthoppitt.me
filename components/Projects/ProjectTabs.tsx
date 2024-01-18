@@ -39,7 +39,7 @@ export function ProjectTabs() {
                   })}
                 </Flex>
               </Stack>
-              </Tabs.Tab>
+            </Tabs.Tab>
           )
         })}
       </Tabs.List>
