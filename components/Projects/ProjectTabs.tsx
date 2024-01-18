@@ -13,15 +13,15 @@ export function ProjectTabs() {
       <Tabs.List>
         {projectList.map(project => {
           return (
-            <Tabs.Tab value={project.value} key={project.value} leftSection={
+            <Tabs.Tab value={project.value} key={project.value} pl={10} leftSection={
               <Image
                 src={project.icon}
                 w="auto"
                 h={60}
               />
             }>
-              <Stack gap={0} w={250}>
-                <Group>
+              <Stack gap={10}>
+                <Flex gap={10}>
                   <Text size="xl" fw={700}>{project.title}</Text>
                   <ActionIcon component="a" href={project.repo} target="_blank" variant="transparent">
                     <StyledImage
@@ -32,7 +32,7 @@ export function ProjectTabs() {
                       h={30}
                     />
                   </ActionIcon>
-                </Group>
+                </Flex>
                 <Flex justify="flex-start" align="flex-start" wrap="wrap" gap={10} py={5}>
                   {project.skills.map(skill => {
                     return <Badge key={skill} color="mainBlue.3">{skill}</Badge>
@@ -45,7 +45,7 @@ export function ProjectTabs() {
       </Tabs.List>
       {projectList.map(project => {
         return (
-          <Tabs.Panel value={project.value} key={project.value} px={20} maw="75%">
+          <Tabs.Panel value={project.value} key={project.value} pl={20} style={{ width: 100 }}>
             <Text pb={10}>{project.description}</Text>
             <Flex align="center" justify="space-between" pb={10} px="20%">
               {project.techLogos.map(logoSrc => {
@@ -60,7 +60,7 @@ export function ProjectTabs() {
               })}
             </Flex>
             <ScrollArea scrollbars="x" offsetScrollbars>
-              <Flex gap={20} wrap="nowrap">
+              <Flex gap={20} wrap="nowrap" justify="center">
                 {project.screenshots.map(screenshotSrc => {
                   return (
                     <Image
