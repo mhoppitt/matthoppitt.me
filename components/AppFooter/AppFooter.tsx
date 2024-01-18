@@ -13,19 +13,19 @@ export function AppFooter() {
   return (
     <header id="navigation-bar">
       <div style={{ background: "var(--mantine-color-mainBlue-7)" }}>
-        <Container maw={1300} py={30}>
+        <Container maw={1300} py={40}>
           <Grid align="center">
-            <Grid.Col span={isMobile? 12 : 6}>
+            <Grid.Col span={isMobile ? 12 : 6}>
               <Stack justify="center" align="center" gap={15}>
                 <MantineImage
-                  w={80}
+                  w={60}
                   src="/avatar-no-bg.png"
                 />
                 <Text c="white" ta="center">I build high-quality software</Text>
               </Stack>
             </Grid.Col>
             <Grid.Col span={isMobile? 12 : 6}>
-              <Stack gap={10}>
+              <Stack gap={20}>
                 {!isMobile && (
                   <Text c="white" ta="center" fw={700} size="lg">SOCIALS</Text>
                 )}

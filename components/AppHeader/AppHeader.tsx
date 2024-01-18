@@ -45,13 +45,13 @@ export function AppHeader() {
 
   return (
     <header id="navigation-bar">
-      <Container maw={1300} style={{ paddingTop: isMobile ? 10 : 20, paddingLeft: 0, paddingRight: 0 }}>
+      <Container maw={1300} pl={0} pr={isMobile ? 20 : 0} pt={isMobile ? 10 : 20}>
         <Flex align="center" justify="space-between">
           <Button component="a" href="/" variant="transparent" h={50}>
             <Image
               radius="md"
               w="auto"
-              h={45}
+              h={50}
               fit="contain"
               src="/logo.png"
             />
