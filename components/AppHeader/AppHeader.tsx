@@ -1,20 +1,31 @@
 import { useState } from 'react';
-import { Container, Group, Burger, Image, Button, Flex, Stack, Menu, em } from '@mantine/core';
-import { useMediaQuery, useClickOutside } from '@mantine/hooks';
-import { mantineBreakpointXS } from '../../constants/mantineBreakpointConstants';
+import {
+  Burger,
+  Button,
+  Container,
+  Flex,
+  Group,
+  Image,
+  Menu,
+  Stack,
+} from '@mantine/core';
+import { useClickOutside, useMediaQuery } from '@mantine/hooks';
+import { PAGE_WIDTH } from '@/constants/constants';
+import { MANTINE_BREAKPOINT_SM } from '@/constants/constants';
 
-const links = [
+const navLinks = [
   { url: '/', label: 'HOME' },
-  { url: '#personal-section', label: 'ABOUT' },
+  { url: '#about-section', label: 'ABOUT' },
+  { url: '#experience-section', label: 'EXPERIENCE' },
   { url: '#projects-section', label: 'PROJECTS' },
 ];
 
 export function AppHeader() {
-  const isMobile = useMediaQuery(`(max-width: ${mantineBreakpointXS})`);
+  const isMobile = useMediaQuery(`(max-width: ${MANTINE_BREAKPOINT_SM})`);
   const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
   const ref = useClickOutside(() => setIsBurgerMenuOpen(false));
 
-  const navbarItems = links.map((link) => (
+  const navbarItems = navLinks.map((link) => (
     <Button
       key={link.label}
       component="a"
@@ -27,7 +38,7 @@ export function AppHeader() {
     </Button>
   ));
 
-  const burgerMenuItems = links.map((link) => (
+  const burgerMenuItems = navLinks.map((link) => (
     <Button
       key={link.label}
       component="a"
@@ -45,7 +56,7 @@ export function AppHeader() {
 
   return (
     <header id="navigation-bar">
-      <Container maw={1300} pl={0} pr={isMobile ? 20 : 0} pt={isMobile ? 10 : 20}>
+      <Container maw={PAGE_WIDTH} pl={0} pr={isMobile ? 20 : 0} pt={isMobile ? 10 : 20}>
         <Flex align="center" justify="space-between">
           <Button component="a" href="/" variant="transparent" h={50}>
             <Image
@@ -56,12 +67,18 @@ export function AppHeader() {
               src="/logo.png"
             />
           </Button>
-          <Group gap={5} visibleFrom="xs">
+          <Group gap={5} visibleFrom="sm">
             {navbarItems}
           </Group>
           <Menu width="100%">
             <Menu.Target>
-              <Burger ref={ref} opened={isBurgerMenuOpen} onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)} hiddenFrom="xs" size="md" />
+              <Burger
+                ref={ref}
+                opened={isBurgerMenuOpen}
+                onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
+                hiddenFrom="sm"
+                size="md"
+              />
             </Menu.Target>
             <Menu.Dropdown>
               <Stack align="flex-end">

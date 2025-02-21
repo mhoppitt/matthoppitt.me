@@ -1,46 +1,45 @@
 export type Project = {
-  value: string,
+  key: string,
   title: string,
   icon: string,
   repo: string,
   description: string,
-  skills: string[],
-  screenshots: string[],
-  video?: string,
-  techLogos: string[],
+  skills: string[]
 };
 
-export const projectList: Project[] = [
+export const PROJECT_LIST: Project[] = [
   {
-    value: "asset-assist",
+    key: "asset-assist",
     title: "Home Asset Assist",
-    icon: "/projects/home-asset-assist/asset-assist-icon.png",
+    icon: "/projects/asset-assist-icon.png",
     repo: "https://github.com/mhoppitt/Digithon2023",
-    description: "Many renters don't have contents insurance, and those that are insured may find it difficult to value their contents correctly. Home Asset Assist utilises machine learning to allow this market to get an accurate contents insurance quote within 2 minutes by simply walking around their home. Developed in a 48-hour hackathon.",
-    skills: ["Android", "Kotlin", "Tensorflow"],
-    screenshots: ["/projects/home-asset-assist/asset-assist-home.png", "/projects/home-asset-assist/asset-assist-record.png", "/projects/home-asset-assist/asset-assist-quote.png"],
-    video: "/projects/home-asset-assist/asset-assist-walkthrough.mp4",
-    techLogos: ["/projects/home-asset-assist/android-logo.png", "/projects/home-asset-assist/kotlin-logo.png", "/projects/home-asset-assist/tensorflow-logo.png"]
+    description: `Home Asset Assist provides an easy and efficient solution for renters who struggle with accurately valuing their
+    contents for insurance purposes. By leveraging machine learning, the app allows users to receive an accurate contents insurance
+    quote in just 2 minutes—simply by walking around their home. Developed during a 48-hour hackathon, this app makes the process of
+    getting insured quicker and more accessible for renters.`,
+    skills: ["Android", "Kotlin", "Tensorflow"]
   },
   {
-    value: "hoppitt-calendar",
+    key: "hoppitt-calendar",
     title: "Hoppitt Calendar",
-    icon: "/projects/hoppitt-calendar/hoppitt-calendar-icon.png",
+    icon: "/projects/hoppitt-calendar-icon.png",
     repo: "https://github.com/mhoppitt/Hoppitt-Calendar",
-    description: "Shared households can often struggle with planning the movements of each member. Hoppitt Calendar provides a centralised online platform to provide the whole household with insight into each person's week. Custom attributes are provided for events specific to the Hoppitt household, and events are synced in real-time.",
-    skills: ["iOS", "SwiftUI", "AWS", "Testflight"],
-    screenshots: ["/projects/hoppitt-calendar/hoppitt-calendar-home.png", "/projects/hoppitt-calendar/hoppitt-calendar-keydates.png", "/projects/hoppitt-calendar/hoppitt-calendar-addevent.png"],
-    video: "/projects/hoppitt-calendar/hoppitt-calendar-walkthrough.mp4",
-    techLogos: ["/projects/hoppitt-calendar/apple-logo.png", "/projects/hoppitt-calendar/swiftui-logo.png", "/projects/hoppitt-calendar/aws-logo.png"]
+    description: `Hoppitt Calendar simplifies the scheduling challenges faced by shared households by providing a centralised
+    platform for all members to easily plan and track their activities. With custom attributes tailored to the unique needs of the
+    household, events are seamlessly synced in real-time, giving everyone an up-to-date view of each other's week. This app fosters
+    better coordination and smoother day-to-day living for shared homes.`,
+    skills: ["iOS", "SwiftUI", "AWS S3", "AWS SNS"]
   },
   {
-    value: "matthoppitt-me",
-    title: "matthoppitt.me",
-    icon: "avatar.png",
-    repo: "https://github.com/mhoppitt/matthoppitt.me",
-    description: "A portfolio site built by me to showcase my career and achievements so far. Built with Next.js and Mantine, deployed with Vercel.",
-    skills: ["Next.js", "Typescript", "Vercel"],
-    screenshots: ["/projects/matthoppitt-me/matthoppitt-me-home.png"],
-    techLogos: ["/projects/matthoppitt-me/nextjs-logo.png", "/projects/matthoppitt-me/typescript-logo.png", "/projects/matthoppitt-me/vercel-logo.png"]
+    key: "fur-finder",
+    title: "FurFinder",
+    icon: "/projects/fur-finder-icon.png",
+    repo: "https://github.com/mhoppitt/FurFinder",
+    description: `FurFinder is a fun and interactive app designed to get you outdoors and connect with people through a shared love
+    of dogs. With a list of 100+ dog breeds, users can capture photos of different breeds, add details like the dog's name, age,
+    and a fun fact, and track their progress toward finding every listed breed. The app not only motivates users to explore their
+    surroundings but also encourages conversation with strangers, making it a great way to meet new people and make friends along
+    the way.`,
+    skills: ["iOS", "SwiftUI", "AWS S3", "AWS DynamoDB"]
   }
 ]
