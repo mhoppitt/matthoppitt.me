@@ -12,7 +12,7 @@ export const PROJECT_LIST: Project[] = [
     key: "asset-assist",
     title: "Home Asset Assist",
     icon: "/projects/asset-assist-icon.png",
-    repo: "https://github.com/mhoppitt/Digithon2023",
+    repo: "https://github.com/mhoppitt/Home-Asset-Assist",
     description: `Home Asset Assist provides an easy and efficient solution for renters who struggle with accurately valuing their
     contents for insurance purposes. By leveraging machine learning, the app allows users to receive an accurate contents insurance
     quote in just 2 minutes—simply by walking around their home. Developed during a 48-hour hackathon, this app makes the process of
