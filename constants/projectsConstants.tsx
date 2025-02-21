@@ -28,7 +28,7 @@ export const PROJECT_LIST: Project[] = [
     platform for all members to easily plan and track their activities. With custom attributes tailored to the unique needs of the
     household, events are seamlessly synced in real-time, giving everyone an up-to-date view of each other's week. This app fosters
     better coordination and smoother day-to-day living for shared homes.`,
-    skills: ["iOS", "SwiftUI", "AWS S3", "AWS SNS"]
+    skills: ["iOS", "SwiftUI", "AWS SNS", "AWS DynamoDB"]
   },
   {
     key: "fur-finder",
