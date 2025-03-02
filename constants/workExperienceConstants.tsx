@@ -47,7 +47,7 @@ export const WORK_EXPERIENCE_LIST: WorkExperience[] = [
     jobDescription: `Applied meticulous attention to detail in manual and exploratory UI and API testing, ensuring a seamless user
     experience. Worked closely with senior team members to enhance the automated UI testing framework with Cypress, improving
     efficiency and reliability.`,
-    skills: ["TManual & Exploratory Testing", "Cypress Automation"],
+    skills: ["Manual & Exploratory Testing", "Cypress Automation"],
     location: "Sydney, AUS",
     website: "suncorpgroup.com.au",
     image: "/experience/suncorp-group.png"

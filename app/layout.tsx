@@ -3,7 +3,7 @@ import { MantineProvider, ColorSchemeScript } from '@mantine/core';
 import { theme } from '../theme';
 
 export const metadata = {
-  title: 'Matt Hoppitt | Developer',
+  title: 'Matt Hoppitt | Software Engineer',
 };
 
 export default function RootLayout({ children }: { children: any }) {
